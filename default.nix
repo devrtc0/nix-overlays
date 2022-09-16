@@ -1,5 +1,5 @@
 self: super:
 
 {
-	yandex-browser-stable = super.callPackage ./pkgs/yandex-browser-stable { };
+	yandex-browser = super.callPackage ./pkgs/yandex-browser-stable { };
 }
