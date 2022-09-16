@@ -50,11 +50,11 @@
 
 stdenv.mkDerivation rec {
   pname = "yandex-browser";
-  version = "22.7.5.933-1";
+  version = "22.7.5.1034-1";
 
   src = fetchurl {
     url = "http://repo.yandex.ru/yandex-browser/deb/pool/main/y/${pname}-stable/${pname}-stable_${version}_amd64.deb";
-    sha256 = "5251672f0a624ba2aa9027638369f712820963bff861b436f5bd3cbc78e83d20";
+    sha256 = "8fd606608c8735775ac6a0295a1b8963413ec47613737a81a281db5ef2f216c3";
   };
 
   nativeBuildInputs = [
