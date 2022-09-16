@@ -117,7 +117,8 @@ stdenv.mkDerivation rec {
   installPhase = ''
     cp $TMP/ya/{usr/share,opt} $out/ -R
     substituteInPlace $out/share/applications/yandex-browser.desktop --replace /usr/ $out/
-    ln -sf $out/opt/yandex/browser/yandex_browser $out/bin/yandex-browser-stable
+    substituteInPlace $out/share/applications/yandex-browser.desktop --replace 'yandex-browser-stable' 'yandex-browser'
+    ln -sf $out/opt/yandex/browser/yandex_browser $out/bin/yandex-browser
   '';
 
   runtimeDependencies = map lib.getLib [
